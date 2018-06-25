@@ -1,0 +1,19 @@
+v-text:会对标签转义
+v-html:不会对标签转义
+v-on:click="" 绑定一个click事件 触发的函数定义在实例中的methods内部
+v-on可简写成@
+
+v-bind:属性绑定
+v-bind:可以简写成:
+v-model:双向绑定
+v-if: 清除掉dom
+v-show: 没有清除掉dom结构 只是改变display属性
+v-for:循环
+    :key
+
+组件，即为网页中的某一部分
+组件化开发
+如何定义组件
+组件之间如何通信
+
+scope是作用域修饰符

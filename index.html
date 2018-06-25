@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}    
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+    </div>
+    <div id="app-3">
+        <p v-if="seen">现在你看到我了</p>    
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>    
+    </div>
+
+    <div id="app-5">
+        <p>{{ message }}</p>    
+        <button v-on:click="reverseMessage">逆转消息</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">    
+    </div>
+
+    <div id="app-7">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+            </todo-item>
+        </ol>    
+    </div>
+
+    <div id="app-8">
+        <div v-bind:title="title">hello world</div>
+        <input v-model="content"/>
+        <div>{{content}}</div>
+    </div>
+
+    <div id="app-9">
+        姓：<input v-model="firstName" />
+        名：<input v-model="lastName" />
+        <div>{{fullName}}</div>
+        <div>{{count}}</div>
+    </div>
+
+    <div id="app-10">
+        <div v-if="show">hello world</div>
+        <button @click="handleClick">toggle</button>
+        <ul>
+            <li v-for="item of list" :key="">{{item}}</li>
+        </ul>
+    </div>
+
+    <!--挂载点，模板，实例之间的关系 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
